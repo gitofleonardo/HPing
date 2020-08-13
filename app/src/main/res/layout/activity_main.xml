@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="@color/themeColor"
+        android:layout_width="match_parent"
+        android:layout_height="54dp">
+
+    </androidx.appcompat.widget.Toolbar>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <EditText
+                android:hint="@string/ip_address"
+                android:background="@drawable/ip_bg"
+                android:layout_margin="20dp"
+                android:id="@+id/ipAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:autofillHints="@string/ip_address" />
+            <ListView
+                android:id="@+id/pingList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/pingBtn"
+            android:padding="25dp"
+            android:background="@drawable/btn_bg"
+            app:backgroundTint="@color/themeColor"
+            android:src="@drawable/ping_min"
+            android:layout_margin="20dp"
+            android:layout_gravity="right|bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+</LinearLayout>
